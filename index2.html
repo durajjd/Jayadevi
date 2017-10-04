@@ -8,15 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="styles.css">
  <link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
 
- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
+<script src="script.js"></script>
 </head>
-<body ng-app="invoiceApp" ng-controller="mainController"><body>
+<body ng-app="invoiceApp" ng-controller="mainController">
     
 <header>
-    <a href="index1.html"> <img src="images.jpg"></a>
+    <a href="index2.html"> <img src="images.jpg"></a>
     <h1 style="color:black;
       font-size: 70px;
  margin:40px 40px 40px 900px">Ezee<span style="color:darkblue">Bills</span></h1>
@@ -56,52 +61,17 @@
 
 </header>
 
+<div>
+                       <p><a href="#!InvoiceLanding" >Invoice Profile</a></li></p>
+                                    <p><a href="#!InvoiceCreate"  >Create Invoice</a></p>
+                                    <p><a href="#!InvoiceView" >View Invoice</a></p>
+                                    <p><a href="#!InvoiceUpdate"  >Update Invoice</a></p>
+                                    <p><a href="#!InvoiceSearch" >Search Invoice</a></p>
+                                    <p><a href="#!InvoiceDeleteConfirm" >Delete Invoice</a></p></div>
+                              
 
-<div class="sidenav">	
-
-	<button  class="sidenavi">Create Invoice</button><br>
-    <button  class="sidenavi">View Invoice</button><br>
-    <button  class="sidenavi">Update Invoice</button><br>
-    <button  class="sidenavi">Delete Invoice</button><br>
-           
-
+                                <div style="float: left;background: silver;" ng-view></div>
 </body>
 
-<script>  
-  
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-});
-
-
-
-
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "hide";
-    }
-}
-
-function logout() {
-	
-window.location = "index1.html"; 
-}
-var modal = document.getElementById('id02');
-
-function viewProfile()
-{
-	text = localStorage.getItem("testJSON");
-obj = JSON.parse(text);
-document.getElementById("demo").innerHTML = obj.firstName;
-}
-
-
-</script>
 
 </html>

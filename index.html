@@ -1,59 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head><title>EzeeHome</title>
+  <head><title>index</title>
    <meta charset="UTF-8">
   <meta name="description" content="index">
   <meta name="keywords" content="invoice management">
   <meta name="author" content="Jayadevi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-<link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="styles.css">
  <link rel="stylesheet" href="login.css">
+<style>
 
- <script src="script.js"></script>
+header { text-align:center;
+     
+background: url('https://securecdn.pymnts.com/wp-content/uploads/2017/02/certify-corporate-travel-expense-management-automation-manual-trends-business-trip-spend-1000x600.jpg');
+
+     
+      background-size: cover;
+
+ 
+      color: white;
+    }
+    a { 
+      color: white;
+text-decoration:none;
+font-size:22px;
+
+    }
+    h1 { color:black;
+      font-size: 70px;
+ margin:40px 40px 40px 900px;
+
+    }
 
 
 
+    img {
+     margin:40px 40px 40px 900px;
+
+      border: 7px solid white;
+      border-radius: 120px;
+
+
+    }
+    ul {text-align:left;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {color:black;
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+</style>
 
 </head>
-<body ng-app="invoiceApp" ng-controller="mainController">
+<body>
     
 <header>
-    <a href="index1.html"> <img src="images.jpg"></a>
-    <h1 style="color:black;
-      font-size: 70px;
- margin:40px 40px 40px 900px">Ezee<span style="color:darkblue">Bills</span></h1>
+    <img src="images.jpg">
+    <h1 >Ezee<span style="color:darkblue">Bills</span></h1>
     <ul>
-      <li class="hori dropdown"> 
-      	<a href="javascript:void(0)" class="horiz">By Role</a>
-    <div style= "margin:0" class="dropdown-content">
-      <a href="#">For Small business</a>
-      <a href="#">For Enterprises</a>
-      <a href="#">For Freelancers</a>
-    </div></li>
-       <li class="hori dropdown"> 
-      	<a href="javascript:void(0)" class="horiz">Features</a>
-    <div style= "margin:0" class="dropdown-content">
-      <a href="#">Online Invoicing</a>
-      <a href="#">Online Payment</a>
-      <a href="#">Subscription Billing</a>
-      <a href="#">Client Management</a>
-      
-    </div></li>
-      <li class="hori dropdown">
-    <a href="javascript:void(0)" class="horiz">More</a>
-    <div style= "margin:0" class="dropdown-content">
-      <a href="#">Company</a>
-      <a href="#">Pricing</a>
-      <a href="#">Knowlege Base</a>
-      <a href="#">Support</a>
-      <a href="#">Contact</a>  
-    </div></li>
-  
-  <li style="float:right"><button class="active" onclick="document.getElementById('id01').style.display='block'" >Login</button></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Rules</a></li>
+      <li><a href="#">Eligibility</a></li>
+  <li style="float:right"><a><button onclick="document.getElementById('id01').style.display='block'" >Login</button></a></li>
 
 <div id="id01" class="modal">
   
@@ -65,27 +89,27 @@
 
     <div class="container">
       <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+      <input type="password" placeholder="Enter Password" name="psw" required>
         
-    <input type="button" value="Login" id="submit" onclick="validate()"/>
+     <button type="submit">Login</button>
       <input type="checkbox" checked="checked"> Remember me
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-	<span class="psw" ><a " href="#">Forgot password?</a></span>
+	<span class="psw" >Forgot <a href="#">password?</a></span>
       <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       
     </div>
   </form>
 </div>
-  <li  style="float:right"><button  onclick="document.getElementById('id02').style.display='block'" >Register</button></li>
+  <li style="float:right"><a><button onclick="document.getElementById('id02').style.display='block'" >Register</button></a></li>
 
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" action="/page1.html" method="post" name="myForm">
+  <form class="modal-content animate" action="/page1.html" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <h1 style="text-align:center" >Register<h1>
@@ -93,12 +117,12 @@
 
     <div class="container">
      <label><b>First Name</b> </label><input type="text" name="firstName" ><br><br/>
-<label><b>Gender</b></label><br>
-
-<input type="radio" name="Gender" value="m">Male<br>
-<input type="radio" name="Gender" value="f">Female<br>
-<input type="radio" name="Gender" value="o">Other<br><br/>
-
+<label><b>Gender</b></label>  <br><select>
+<option value="n" style="background-color:silver">Select</option>
+ <option value="m">Male</option>
+  <option value="f"> Female</option>
+  <option value="o"> Other</option></select>
+        <br><br/>
         
       <label><b>Country</b></label>   
         <select name="mySel">
@@ -382,7 +406,7 @@
  
 <label><b>Other specifications</b></label>  
  <textarea name="bigText" placeholder="Comments please"></textarea>
-        <br><br/>
+        <br>
         
      <button type="submit" style="align:center">Register</button>
       
@@ -399,82 +423,127 @@
 
 
 </header>
+  <article>
+    <h2>VHS umami pop-up trust fund</h2>
+    <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>Sartorial synth Echo Park, roof party</h2>
+    <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>Forage food truck keytar master cleanse</h2>
+    <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
+    <button>Like</button>
+  </article>
+ 
 
-
-<div style="margin:10px;background:#dcf5f5 ">
-
-	<h1 style="text-align: center">Features to Help Your Business Better</h1>
-<h2 style="text-align: center">Ezee<span style="color: darkblue">Bills</span> comes with a range of features to manage a business effectively and efficiently.</h2>
-  <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>
- <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>
-  <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>                                   
-
-  <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>
-
- <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>
-  <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>                                   
-
-  <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>
-
- <div class="Innerbtm ">
-                                        <h3>Accounts Receivable &amp; Payable Management</h3>
-                                        <p>Faster invoicing and payments process. Reduced invoice errors and disputes.</p>
-                                    </div>                                   
+<div class="sidenav">	
+           
+            <div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Create Invoice</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div><br>
+            
+           
+            <div class="dropdown">
+<button onclick="myFunction2()" class="dropbtn">Search Invoice</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div><br>
+            
+           
+            <div class="dropdown">
+<button onclick="myFunction3()" class="dropbtn">Update Invoice</button>
+  <div id="myDropdown3" class="dropdown-content" >
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div><br>
+           
+            <div class="dropdown">
+<button onclick="myFunction4()" class="dropbtn">Delete Invoice</button>
+  <div id="myDropdown4" class="dropdown-content">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div><br>
 </div>
+
 </body>
 
-<script>
-	var t = new highu();
-	t.login()
+<script> var x,x2,x3,x4=0; 
+  function myFunction() {
+  
+    document.getElementById("myDropdown").classList.toggle("show");
+   
+   
+    
+}
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+   
+   
+}
+function myFunction3() {
+
+    document.getElementById("myDropdown3").classList.toggle("show");
+    
+   
+}
+function myFunction4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
+    
+    
+   
+}
 $(document).ready(function(){
     $("#myBtn").click(function(){
         $("#myModal").modal();
     });
 });
 
+$("button").on("click", function() {
+      alert("Clicked!");
+    });
 
-function validate(){
-var username = document.getElementById("username").value;
-var password = document.getElementById("password").value;
-if ( username == "Jayadevi" && password == "Durai#123"){
-alert ("Login successfully");
-window.location = "index2.html"; // Redirecting to other page.
-return false;
-}
-else{
-
-alert("Please Check your Credentials");
-
-return false;
-
-}
-}
 
 // Get the modal
 var modal = document.getElementById('id01');
 
-
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "hide";
+    }
+}
 
 var modal = document.getElementById('id02');
 
