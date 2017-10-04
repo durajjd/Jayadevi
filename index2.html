@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head><title>index</title>
+   <meta charset="UTF-8">
+  <meta name="description" content="index">
+  <meta name="keywords" content="invoice management">
+  <meta name="author" content="Jayadevi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="login.css">
+
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+</head>
+<body ng-app="invoiceApp" ng-controller="mainController"><body>
+    
+<header>
+    <a href="index1.html"> <img src="images.jpg"></a>
+    <h1 style="color:black;
+      font-size: 70px;
+ margin:40px 40px 40px 900px">Ezee<span style="color:darkblue">Bills</span></h1>
+    <ul>
+      
+  
+  <li style="float:right"><button class="active" onclick="document.getElementById('id01').style.display='block'" >Logout</button></li>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/page1.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <h1 style="text-align:center" >Logged out successfully<h1>
+      	<input type="button" value="OK" id="submit" onclick="logout()"/>
+    </div>
+
+   
+  </form>
+</div>
+  <li style="float:right"><button onclick="document.getElementById('id02').style.display='block'" >Profile</button></li>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate"  method="post">
+    <div  class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <input value="Submit" type="submit" onclick="viewProfile()">
+      <p id="demo"></p>
+      
+      
+    </div>
+  </form>
+</div>
+</ul>
+
+
+</header>
+
+
+<div class="sidenav">	
+
+	<button  class="sidenavi">Create Invoice</button><br>
+    <button  class="sidenavi">View Invoice</button><br>
+    <button  class="sidenavi">Update Invoice</button><br>
+    <button  class="sidenavi">Delete Invoice</button><br>
+           
+
+</body>
+
+<script>  
+  
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+
+
+
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "hide";
+    }
+}
+
+function logout() {
+	
+window.location = "index1.html"; 
+}
+var modal = document.getElementById('id02');
+
+function viewProfile()
+{
+	text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.firstName;
+}
+
+
+</script>
+
+</html>
