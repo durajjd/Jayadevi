@@ -166,7 +166,7 @@ function myFunction() {
     			console.log(invoiceNo);
     			/*  view Invoice  */
     			$http.post('http://localhost:8181/scm/invoice/searchInvoice?invoiceID='+invoiceNo).success(function (data) {
-    				console.log( "in updat after Search http");
+    				console.log( "in update after Search http");
     				$scope.invoice = data;
                     console.log($scope.invoice);
                     window.location = "#/InvoiceUpdate";

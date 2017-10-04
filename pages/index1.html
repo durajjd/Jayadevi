@@ -8,8 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> 
+
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+ <script src="angular.min.js"></script>
+<script src="angular-resource.min.js"></script>
+<script src="angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+
 <link rel="stylesheet" href="styles.css">
  <link rel="stylesheet" href="login.css">
 
@@ -48,7 +56,7 @@
     <div style= "margin:0" class="dropdown-content">
       <a href="#">Company</a>
       <a href="#">Pricing</a>
-      <a href="#">Knowlege Base</a>
+      <a href="#">Knowledge Base</a>
       <a href="#">Support</a>
       <a href="#">Contact</a>  
     </div></li>
@@ -444,40 +452,5 @@
 </div>
 </body>
 
-<script>
-	var t = new highu();
-	t.login()
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-});
-
-
-function validate(){
-var username = document.getElementById("username").value;
-var password = document.getElementById("password").value;
-if ( username == "Jayadevi" && password == "Durai#123"){
-alert ("Login successfully");
-window.location = "index2.html"; // Redirecting to other page.
-return false;
-}
-else{
-
-alert("Please Check your Credentials");
-
-return false;
-
-}
-}
-
-// Get the modal
-var modal = document.getElementById('id01');
-
-
-
-var modal = document.getElementById('id02');
-
-</script>
 
 </html>
